@@ -16,8 +16,7 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
   urlDB = 'mongodb://diaz:diaz123456@ds135335.mlab.com:35335/diaz-test';
 } else {
-  urlDB =
-    'mongodb+srv://andresdiaz:yMIede4xjrGu7wZU@cluster0-bu0vr.mongodb.net/cafe';
+  urlDB = process.env.MONGO_URI;
 }
 
 process.env.URLDB = urlDB;
